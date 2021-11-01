@@ -1,7 +1,4 @@
 import React from "react";
-import employeeManagement from "../../media/employeeManagement.webp"
-import rickApi from "../../media/rickPage.webp"
-import MemePage from "../../media/memePage.jpg"
 const slideInfo = [
     {
         src: "https://cdn.pixabay.com/photo/2016/12/19/08/39/mobile-phone-1917737_960_720.jpg",
