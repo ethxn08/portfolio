@@ -20,6 +20,15 @@
 .cover-container > h1 {
   font-size: 100px;
 }
+.Typewriter__wrapper {
+  font-size: 40px;
+}
+.Typewriter__cursor {
+  font-size: 40px;
+}
+.typeWriter-name {
+  font-size: 100px;
+}
 .cover-container > p {
   font-size: 32px;
 }
