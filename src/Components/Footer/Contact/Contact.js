@@ -4,11 +4,6 @@ import emailjs from 'emailjs-com';
 
 function Contact() {
 
-    const [email,setEmail] = useState('')
-    const [affair,setAffair] = useState('')
-    const [message,setMessage] = useState('')
-
-
     const sendEmail = (e) => {
         e.preventDefault();
         

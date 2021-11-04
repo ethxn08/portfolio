@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 import CoverVideo from "../../media/Cover.mp4"
 import Typewriter from "typewriter-effect"
 
