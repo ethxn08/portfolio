@@ -1,5 +1,6 @@
 
 import React,{useState} from 'react'
+import emailjs from 'emailjs-com';
 
 function Contact() {
 
@@ -8,64 +9,41 @@ function Contact() {
     const [message,setMessage] = useState('')
 
 
-    const sendEmail = (event) => {
-        event.preventDefault();
-        console.log('Email: ', email)
-        console.log('Email: ', affair)
-        console.log('Email: ', message)
-       
-        let formulario = document.getElementById('formulario');
-            formulario.addEventListener('submit', function() {
-              formulario.reset();
-            });
+    const sendEmail = (e) => {
+        e.preventDefault();
+        
+        emailjs.sendForm('service_jxqnm0j', 'template_3b8eo1s', e.target, 'user_RdjOucKQMLRufrAUKtN8i')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+
     };
     return (
         <div className="contact-section">
             <h1>Contact Section</h1>
             <form onSubmit={sendEmail} className="formulario" id="formulario">
-                <div>
-                    <label htmlFor="email">Email</label>
-                    <input 
-                    type="email"
-                    name="email"
-                    onChange = {e => {
-                        setEmail(e.target.value)
-                    }}
-                    className="form-control"
-                    required
-                    />
-                </div>
-                <br />
-                <div>
-                    <label htmlFor="affair">Affair</label>
-                    <input 
-                    type="text" 
-                    name="affair"
-                    onChange = {e => {
-                        setAffair(e.target.value)
-                    }}
-                    className="form-control"
-                    required
-                    />
-                </div>
-                <br />
-                <div>
-                    <label htmlFor="message">Message</label>
-                    <textarea
-                    rows="4"
-                    type="text" 
-                    name="message"
-                    onChange = {e => {
-                        setMessage(e.target.value)
-                    }}
-                    className="form-control"
-                    required
-                    />
-                </div>
-                <br />
-                <div>
-                  <button type="submit" className="btn btn-light w-100">Send !</button>
-                </div>
+                <input type="hidden" name="contact_number" />
+                        <div>
+                            <label>Name</label>
+                            <input type="text" name="user_name" className="form-control" required />
+                        </div>
+                    <br />
+                        <div>
+                            <label>Email</label>
+                            <input type="email" name="user_email" className="form-control" required />
+                    </div>
+                   <br/>
+                    <div>
+                            <label>Message</label>
+                            <textarea name="message" className="form-control" />
+                    </div>
+                   <br />
+                   <div>
+                    <input type="submit" value="Send" className="btn btn-light w-50" required />
+                    <input type="reset" value="Clear" className="btn btn-light w-50" required />
+                   </div>
             </form>
         </div>
     )
