@@ -1,5 +1,6 @@
 import React from 'react'
 import se from "../../media/se.jpg"
+
 function About() {
     return (
         <div className="about-container">
@@ -11,7 +12,7 @@ function About() {
                 </p>
                 <h3>Technologies that I master</h3>
                 <p>
-                    ReactJs | Node | PHP | MYSQL | MongoDb | JS | GitHub | Kali Linux & Linux Dependencies | C# | Html 5 | CSS | Sass | Webpack
+                    ReactJs | Node | PHP | MYSQL | MongoDb | JS | GitHub | Kali Linux & Linux Dependencies | C# | Html 5 | CSS | Sass | Webpack | Firebase | Unity | Networks | Assembly and maintenance of computer equipment
                 </p>
             </div>
             <div className="about-img">

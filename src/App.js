@@ -8,6 +8,7 @@ import Info from "./Components/Info";
 import Footer from './Components/Footer';
 import {Spinner} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ContactMobile from "./Components/Footer/ContactMobile";
 
 function App() {
 
@@ -45,6 +46,7 @@ function App() {
         <Cover />
         <About />
         <Slider />
+        <ContactMobile />
         <Info />
         <Footer />
         </>

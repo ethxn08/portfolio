@@ -29,6 +29,10 @@
 .typeWriter-name {
   font-size: 100px;
 }
+
+.typeWriter-skills {
+  font-size: 20px;
+}
 .cover-container > p {
   font-size: 32px;
 }
@@ -182,6 +186,9 @@
   align-items: center;
   flex-direction: column;
 }
+.contact-mobile-section {
+  display: none;
+}
 .info-section {
   display: flex;
   justify-content: center;
@@ -305,6 +312,15 @@
   }
   .contact-section {
     display: none;
+  }
+  .contact-mobile-section {
+    height: 500px;
+    background-color: rgb(8, 8, 8);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   .hyperlinks-section {
     width: 100%;

@@ -13,7 +13,7 @@ function Cover() {
                 strings: ['Ethan Alfaro Figueira', 'Frontend Dev | UX & UI Designer','Game Dev | Ethical Hacker'],
                 autoStart: true,
                 loop: true,
-                className:"name"
+                className:"name" 
         }}
              />
             
